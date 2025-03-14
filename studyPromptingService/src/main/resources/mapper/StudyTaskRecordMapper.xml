@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wy.studypromptingservice.mapper.StudyTaskRecordMapper">
+
+    <resultMap id="BaseResultMap" type="com.wy.studypromptingservice.dao.StudyTaskRecord">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="userId" column="user_id" jdbcType="BIGINT"/>
+            <result property="taskId" column="task_id" jdbcType="BIGINT"/>
+            <result property="startTime" column="start_time" jdbcType="TIMESTAMP"/>
+            <result property="startImage" column="start_image" jdbcType="VARCHAR"/>
+            <result property="endTime" column="end_time" jdbcType="TIMESTAMP"/>
+            <result property="endImage" column="end_image" jdbcType="VARCHAR"/>
+            <result property="status" column="status" jdbcType="OTHER"/>
+            <result property="createdAt" column="created_at" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,user_id,task_id,
+        start_time,start_image,end_time,
+        end_image,status,created_at
+    </sql>
+</mapper>
